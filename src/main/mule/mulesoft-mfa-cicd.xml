@@ -8,8 +8,8 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
 	<flow name="mulesoft-mfa-cicd:main" doc:id="cb67b449-9de9-4553-ad67-c91005e42313" >
-		<http:listener doc:name="Listener" doc:id="1a56775f-1b6b-428f-b3da-5050f2d68419" config-ref="HTTP_Listener_config" path="/hello"/>
-		<set-payload value='#["Hello World!"]' doc:name="Set Payload" doc:id="a32716cc-0ab2-49c3-9749-012b732034fb" />
-		<logger level="INFO" doc:name="Logger" doc:id="32bdff66-9b02-4c49-a189-74cc378307b5" message="#[payload]"/>
+		<http:listener doc:name=":8081/hello" doc:id="1a56775f-1b6b-428f-b3da-5050f2d68419" config-ref="HTTP_Listener_config" path="/hello"/>
+		<set-payload value='#["Hello World!"]' doc:name='"Hello World!"' doc:id="a32716cc-0ab2-49c3-9749-012b732034fb" />
+		<logger level="INFO" doc:name="Log payload" doc:id="32bdff66-9b02-4c49-a189-74cc378307b5" message="#[payload]"/>
 	</flow>
 </mule>

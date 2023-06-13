@@ -29,6 +29,23 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<!-- Deployment config start -->
+				<configuration>
+					<cloudHubDeployment>
+						<uri>https://anypoint.mulesoft.com</uri>
+						<muleVersion>4.4.0</muleVersion>
+						<applicationName>mulesoft-mfa-cicd</applicationName>
+						<environment>Sandbox</environment>
+						<workerType>MICRO</workerType>
+						<region>us-east-2</region>
+						<workers>1</workers>
+						<objectStoreV2>true</objectStoreV2>
+						<connectedAppClientId>${client.id}</connectedAppClientId>
+						<connectedAppClientSecret>${client.secret}</connectedAppClientSecret>
+						<connectedAppGrantType>client_credentials</connectedAppGrantType>
+					</cloudHubDeployment>
+				</configuration>
+				<!-- Deployment config end -->
 			</plugin>
 		</plugins>
 	</build>
