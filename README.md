@@ -2,6 +2,8 @@
 
 Repository used to demonstrate how to create a simple CI/CD pipeline using a connected app in Anypoint Platform (for MFA).
 
+**Note:** The initial versions of the pipeline are based on the following repository created by Archana Patel: [arch-jn/github-actions-mule-cicd-demo](https://github.com/arch-jn/github-actions-mule-cicd-demo).
+
 Tutorial link: TBD
 
 Similar resources:
