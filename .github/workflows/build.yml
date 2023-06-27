@@ -58,4 +58,4 @@ jobs:
             mvn deploy -DskipMunitTests -DmuleDeploy \
              -Dmule.artifact=$artifactName \
              -Dclient.id="${{ secrets.CONNECTED_APP_CLIENT_ID }}" \
-             -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}" \
+             -Dclient.secret="${{ secrets.CONNECTED_APP_CLIENT_SECRET }}"
